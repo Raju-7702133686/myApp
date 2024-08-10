@@ -1,2 +1,22 @@
-<h1>hello</h1>
-<p>This is a p tag</p>
+<form action="" [formGroup]="userForm">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="name" class="form-label">username
+        <input type="text" class="form-control" formControlName>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="name" class="form-label">Password
+        <input type="text" class="form-control" formControlName="password">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary" (click)="submit()" [disabled]="!userForm.valid">Submit</button>
+
+    </div>
+  </div>
+</form>
